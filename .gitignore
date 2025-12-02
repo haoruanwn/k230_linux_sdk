@@ -17,3 +17,6 @@ GPATH
 GRTAGS
 GTAGS
 gtags.files
+
+# 安装的工具链
+toolchain/
