@@ -20,3 +20,6 @@ gtags.files
 
 # 安装的工具链
 toolchain/
+
+# 其他工程
+projects/

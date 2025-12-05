@@ -1,0 +1,32 @@
+{
+  "name": "K230 SDK Dev Environment",
+  
+  "build": {
+    "dockerfile": "../Dockerfile",
+    "context": ".."
+  },
+
+  "workspaceFolder": "/workspace",
+
+  "remoteUser": "k230",
+
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/workspace,type=bind",
+    "source=${localWorkspaceFolder}/toolchain,target=/opt/toolchain,type=bind"
+  ],
+
+  "remoteEnv": {
+    "TZ": "Asia/Shanghai"
+  },
+
+  "forwardPorts": [22],
+
+  "runArgs": [
+    "--privileged",
+    "--cap-add=SYS_PTRACE",
+    "--security-opt=seccomp:unconfined",
+    "--hostname=k230"
+  ],
+
+  "features": {}
+}
